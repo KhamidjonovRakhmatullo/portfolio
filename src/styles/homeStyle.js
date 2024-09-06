@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
    padding: 0px 12%;
    max-width: 1100px;
+   /* max-width: 1440px; */
    display: flex;
    flex-direction: column;
    margin: auto;
@@ -39,9 +40,9 @@ export const HomeLeftWrapper = styled.div`
     letter-spacing: -0.025em;
     font-weight: 800;
     margin: 20px 0px 0px 0px;
-  }
-  span {
+     span {
     color: rgb(30 144 255);
+  }
   }
   p {
     color: rgb(71 85 105);

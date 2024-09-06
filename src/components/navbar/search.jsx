@@ -15,6 +15,7 @@ import TextField from "@mui/material/TextField";
 
 
 export default function SearchComponent() {
+  
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

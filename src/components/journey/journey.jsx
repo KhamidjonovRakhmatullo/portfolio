@@ -58,11 +58,12 @@ const JourneyComponent = () => {
                 {" "}
                 Freshman at <StyledSpan>Joongbu University</StyledSpan>
               </TitleJob>
-              <DataText>September 2022</DataText>
+              <DataText> South Korea, September 2022</DataText>
               <DataText $Color115>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                maxime blanditiis rem nisi non ea earum esse. Accusantium,
-                consectetur quidem?
+                Embarked on studies at Joongbu University with a focus on
+                international trade and economic strategies. Core coursework
+                includes international trade dynamics, trade policy analysis,
+                global market strategies, and economic diplomacy.
               </DataText>
             </JourneyInfoBox>
           </Step>
@@ -75,15 +76,15 @@ const JourneyComponent = () => {
             }
           >
             <JourneyInfoBox>
-              <TitleJob>
-                {" "}
-                Freshman at <StyledSpan>Joongbu University</StyledSpan>
-              </TitleJob>
-              <DataText>September 2022</DataText>
+              <TitleJob> Academic Lyceum Graduation</TitleJob>
+              <DataText>
+                Lola Academic Lyceum, Namangan State University, Uzbekistan,
+                2021
+              </DataText>
               <DataText $Color115>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                maxime blanditiis rem nisi non ea earum esse. Accusantium,
-                consectetur quidem?
+                Completed studies with a concentration in international
+                languages, gaining proficiency in multiple languages and
+                cultural insights.
               </DataText>
             </JourneyInfoBox>
           </Step>
@@ -96,15 +97,12 @@ const JourneyComponent = () => {
             }
           >
             <JourneyInfoBox>
-              <TitleJob>
-                {" "}
-                Freshman at <StyledSpan>Joongbu University</StyledSpan>
-              </TitleJob>
-              <DataText>September 2022</DataText>
+              <TitleJob> English Proficiency Test,</TitleJob>
+              <DataText> Tashkent, Uzbekistan, May 2022</DataText>
               <DataText $Color115>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                maxime blanditiis rem nisi non ea earum esse. Accusantium,
-                consectetur quidem?
+                Achieved a respectable band score, reflecting solid performance
+                despite some challenges during the test. A good foundation for
+                further improvement.
               </DataText>
             </JourneyInfoBox>
           </Step>

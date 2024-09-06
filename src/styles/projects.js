@@ -1,4 +1,12 @@
 import styled from "styled-components";
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+export const StyledGitHubIcon = styled(GitHubIcon)`
+text-decoration: none;
+  &:hover {
+    color: #1976d2;
+  }
+`;
 
 export const ProjectsTitle = styled.div`
   padding: 24px 0px 32px 0px;
@@ -62,31 +70,15 @@ export const ProjectsContainer = styled.div`
   }
 `;
 export const ProjectBox = styled.div`
-
-  border: 1px solid rgb(163 163 163);
+  /* border: 1px solid rgb(163 163 163); */
+  border: 1px solid #e5e5e5;
   display: flex;
   flex-direction: column;
   align-items: start;
   max-width: 496px;
   padding: 24px;
   border-radius: 5px;
-
-  h2 {
-    letter-spacing: -0.025em;
-    line-height: 2rem;
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 0.75rem;
-    margin: 0px;
-    margin-top: 10px;
-  }
-  p {
-    color: ${(props) => (props.$rang2 ? `rgb(163 163 163)` : ``)};
-    color: rgb(115 115 115);
-    font-size: 1.2rem;
-    line-height: 1.75;
-    margin-bottom: ${(props) => (props.$marginBottom ? `20px` : `0px`)};
-  }
+  /* position: relative; */
 
   transition: 0.3s;
   &:hover {
@@ -100,23 +92,50 @@ export const ProjectBox = styled.div`
 
   @media only screen and (max-width: 500px) {
     padding: 14px;
-    h2 {
+  }
+`;
+export const ProjectName = styled.h2`
+  /* border: 1px solid green; */
+  letter-spacing: -0.025em;
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 2.1rem;
+  margin-bottom: 0.75rem;
+  margin: 10px 0px 8px 0px;
+  @media only screen and (max-width: 500px) {
     letter-spacing: -0.025em;
     line-height: 1.7rem;
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 0.75rem;
-    margin: 0px;
-    margin-top: 7px;
-  }
-  p {
-    font-size: 1rem;
-    line-height: 1.75;
-    margin-bottom: ${(props) => (props.$marginBottom ? `20px` : `0px`)};
-    margin-top: 8px;
-  }
+    margin: 7px 0px 6px 0px;
   }
 `;
+export const Desc = styled.div`
+  /* border: 1px solid red; */
+  color: rgb(115 115 115);
+  font-size: 1.2rem;
+  line-height: 1.75;
+  @media only screen and (max-width: 500px) {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-top: 8px;
+  }
+`;
+export const Stacks = styled.div`
+ color: rgb(163, 163, 163);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  /* border: 1px solid blue; */
+  /* position: absolute; */
+  bottom: 24px; /* Space from the bottom */
+
+  @media only screen and (max-width: 500px) {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+`;
+
 export const ProjectBoxIconWrapper = styled.div`
   /* border: 1px solid red; */
   display: flex;
