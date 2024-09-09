@@ -18,7 +18,7 @@ import { data } from "./data";
 import { Element } from "react-scroll";
 
 const ProjectsComponent = () => {
-  const mockdata = data
+  const mockdata = data;
   return (
     <Element name="projects" className="element">
       <ProjectsTitle>
@@ -27,32 +27,46 @@ const ProjectsComponent = () => {
         <DeviderLine />
       </ProjectsTitle>
       {/* <div style={{display: "flex", justifyContent: 'center'}}> */}
-        <ProjectsContainer>
-          {mockdata.map((value, key)=>{
-            return(
-              <ProjectBox key={key}>
+      <ProjectsContainer>
+        {mockdata.map((value, key) => {
+          return (
+            <ProjectBox key={key}>
               <ProjectBoxIconWrapper>
                 <FolderOutlinedIcon color="primary" sx={{ fontSize: "45px" }} />
                 <GitHubAndNetlifyIconsWrapper>
-                <a href={value.projectLink}> <OpenInNewOutlinedIcon sx={{ cursor: "pointer", color: "black" }} /></a>
-                 <a href={value.gitHubLink}><img
-                    src={github1}
-                    alt="github"
-                    style={{
-                      maxWidth: "25px",
-                      cursor: "pointer",
-                    }}
-                  /></a>
-        
+                  <a
+                    href={value.projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {" "}
+                    <OpenInNewOutlinedIcon
+                      sx={{ cursor: "pointer", color: "black" }}
+                    />
+                  </a>
+                  <a
+                    href={value.gitHubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={github1}
+                      alt="github"
+                      style={{
+                        maxWidth: "25px",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </a>
                 </GitHubAndNetlifyIconsWrapper>
               </ProjectBoxIconWrapper>
               <ProjectName>{value.name}</ProjectName>
               <Desc>{value.description}</Desc>
               <Stacks>{value.stacks}</Stacks>
             </ProjectBox>
-            )
-          })}
-        </ProjectsContainer>
+          );
+        })}
+      </ProjectsContainer>
       {/* </div> */}
     </Element>
   );

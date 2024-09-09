@@ -46,7 +46,7 @@ export default function SearchComponent() {
             timeout: 200,
           },
         }}
-        sx={{ padding: "0px 30px", }}
+        sx={{ padding: "0px 30px"}}
       >
         <Fade in={open}>
           <ModalWrapper>

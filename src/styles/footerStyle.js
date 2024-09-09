@@ -14,6 +14,10 @@ export const FooterText = styled.div`
   letter-spacing: 0.025em;
   font-weight: 300;
   margin: 0px;
+  a{
+    text-decoration: none;
+    color: rgb(115 115 115)
+  }
   span {
     border-bottom: 2px solid #fff;
     cursor: pointer;
