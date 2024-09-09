@@ -75,7 +75,7 @@ export const data = [
     id: 9,
     name: "WWW School",
     description: `A single page web-site`,
-    stacks: `JavaScript • ReactJs `,
+    stacks: `HTML • SCC `,
     projectLink: ``,
     gitHubLink: ``,
   },

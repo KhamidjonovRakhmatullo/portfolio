@@ -15,11 +15,12 @@ import FolderOutlinedIcon from "@mui/icons-material/FolderOutlined";
 import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
 import github1 from "../../assets/github.svg";
 import { data } from "./data";
+import { Element } from "react-scroll";
 
 const ProjectsComponent = () => {
   const mockdata = data
   return (
-    <>
+    <Element name="projects" className="element">
       <ProjectsTitle>
         <TitleOfContainer $MarginBottom10px>Projects</TitleOfContainer>
         <p>Some of the projects I've build or been a part of.</p>
@@ -53,7 +54,7 @@ const ProjectsComponent = () => {
           })}
         </ProjectsContainer>
       {/* </div> */}
-    </>
+    </Element>
   );
 };
 

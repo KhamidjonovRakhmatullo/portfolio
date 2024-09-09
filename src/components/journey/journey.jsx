@@ -13,9 +13,11 @@ import Step from "@mui/joy/Step";
 import StepIndicator, { stepIndicatorClasses } from "@mui/joy/StepIndicator";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import { Element } from "react-scroll";
 
 const JourneyComponent = () => {
   return (
+    <Element name="journey" className="element">
     <JourneyContainer>
       <h1>My Journey</h1>
       <p>
@@ -109,6 +111,7 @@ const JourneyComponent = () => {
         </Stepper>
       </JourneyInfosWrapper>
     </JourneyContainer>
+    </Element>
   );
 };
 

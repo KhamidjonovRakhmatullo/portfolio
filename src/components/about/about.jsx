@@ -9,6 +9,7 @@ import {
 import me from "../../assets/Rakhmatullo.jpg";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import { annotate } from "rough-notation";
+import { Element } from "react-scroll";
 
 const AboutComponent = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const AboutComponent = () => {
   }, []);
 
   return (
+  <Element name="about" className="element">
     <AboutContainer>
       <h1>About</h1>
       {/* <DeviderLine style={{marginTop: "0px", marginBottom: "40px"}} /> */}
@@ -74,6 +76,7 @@ const AboutComponent = () => {
         </AboutRightWrapper>
       </AboutInfosWrapper>
     </AboutContainer>
+  </Element>
   );
 };
 

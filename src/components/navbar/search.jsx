@@ -12,13 +12,22 @@ import {
 } from "../../styles/navbarStyle";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
-
+import { Link } from 'react-scroll'; // Import Link from react-scroll
+import playSound from "../sounds/playSound";
+import clickSound from '../sounds/click.wav'
+import menuSound from '../sounds/menuSound2.mp3'
 
 export default function SearchComponent() {
   
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => {
+    setOpen(true)
+    playSound(menuSound);
+  };
+  const handleClose = () => {
+    setOpen(false)
+    playSound(clickSound);
+  };
 
   return (
     <div>
@@ -57,14 +66,25 @@ export default function SearchComponent() {
             </SearchAndInputWrapper>
             <hr style={{ margin: "20px 0px" }} />
             <ModalPageNamesWrapper>
-              <ModalPageName>Home</ModalPageName>
-              <ModalPageName>Blog</ModalPageName>
-              <ModalPageName>Projects</ModalPageName>
-              <ModalPageName>About</ModalPageName>
-              <ModalPageName>Journey</ModalPageName>
-              <ModalPageName>Contact</ModalPageName>
-              <ModalPageName>Others</ModalPageName>
-            </ModalPageNamesWrapper>
+              <Link to="home" smooth={true} duration={700} offset={0} spy={true} activeClass="active">
+                <ModalPageName onClick={handleClose}>Home</ModalPageName>
+              </Link>
+              <Link to="projects" smooth={true} duration={700} offset={0} spy={true} activeClass="active">
+                <ModalPageName onClick={handleClose}>Projects</ModalPageName>
+              </Link>
+              <Link to="about" smooth={true} duration={700} offset={0} spy={true} activeClass="active">
+                <ModalPageName onClick={handleClose}>About</ModalPageName>
+              </Link>
+              <Link to="journey" smooth={true} duration={700} offset={0} spy={true} activeClass="active">
+                <ModalPageName onClick={handleClose}>Journey</ModalPageName>
+              </Link>
+              <Link to="contact" smooth={true} duration={700} offset={0} spy={true} activeClass="active">
+                <ModalPageName onClick={handleClose}>Contact</ModalPageName>
+              </Link>
+              <Link to="others" smooth={true} duration={700} offset={0} spy={true} activeClass="active">
+                <ModalPageName onClick={handleClose}>Others</ModalPageName>
+              </Link>
+           </ModalPageNamesWrapper>
           </ModalWrapper>
         </Fade>
       </Modal>

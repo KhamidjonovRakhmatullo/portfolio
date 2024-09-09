@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const NavbarContainer = styled.div`
 /* border: 1px solid red; */
@@ -77,11 +77,17 @@ border-radius: 100px;
 background-color: #e5e5e5;
 border: 1px solid #e5e5e5;
 transition: 500ms;
+
+  ${(props) =>
+    props.rotated &&
+    css`
+      transform: rotate(360deg);
+      transition: transform 0.5s ease-in-out;
+      color: ${(props)=> props.$ColorChange ? ` #F5F5F5` : ``};
+    `}
 &:hover{
     transition: 200ms;
-    background-color: ${(props) => props.$BgColor ? `#64ffda` : ``} ;
     border: ${(props) => props.$BgColor ? `1px solid #64ffda` : `1px solid black`} ;
-    color: ${(props)=> props.$ColorYellow ? `yellow` : ``};
     color: ${(props)=> props.$ColorBlue ? `rgb(30 144 255)` : ``};
 }
 `

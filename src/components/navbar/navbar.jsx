@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   NavbarButton,
   NavbarButtonWrapper,
@@ -10,9 +10,21 @@ import Brightness3Icon from "@mui/icons-material/Brightness3";
 import Typewriter from "typewriter-effect";
 import NavbarMenu from "./menu";
 import SearchComponent from "./search";
+import { Link } from 'react-scroll';
+import playSound from "../sounds/playSound";
+import clickSound from '../sounds/click.wav'
+import switchSound from '../sounds/switchSound.mp3'
 
 const NavbarComponent = () => {
-  const [open, setOpen] = useState(false);
+  const [rotated, setRotated] = useState(false);
+
+  const handleClick =()=>{
+    playSound(clickSound)
+  }
+  const handleSwitch =()=>{
+    playSound(switchSound)
+    setRotated(!rotated);
+  }
 
   return (
     <NavbarContainer>
@@ -29,31 +41,24 @@ const NavbarComponent = () => {
         </h2>
       </NavbarLeftWrapper>
       <NavbarRightWrapper>
-        <a href="#home" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p>Home</p>
-        </a>
-        <a href="#blog" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p>Blog</p>
-        </a>
-        <a href="#projects" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p>Projects</p>
-        </a>
-        <a href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p>About</p>
-        </a>
-        <a href="#journey" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p>Journey</p>
-        </a>
+      <Link to="projects" smooth={true} duration={1000} offset={0} onClick={handleClick}>
+        <p>Projects</p>
+      </Link>
+      <Link to="about" smooth={true} duration={1000} offset={0} onClick={handleClick}>
+        <p>About</p>
+      </Link>
+      <Link to="experience" smooth={true} duration={1000} offset={0} onClick={handleClick}>
+        <p>Experience</p>
+      </Link>
+      <Link to="journey" smooth={true} duration={1000} offset={0} onClick={handleClick}>
+        <p>Journey</p>
+      </Link>
         <NavbarButtonWrapper>
-          <>
-            <SearchComponent />
-          </>
-          <NavbarButton $ColorYellow>
+          <SearchComponent/>
+          <NavbarButton $ColorChange onClick={handleSwitch} rotated={rotated}>
             <Brightness3Icon />
           </NavbarButton>
-          <>
-            <NavbarMenu />
-          </>
+          <NavbarMenu clickSound ={handleClick}/>
         </NavbarButtonWrapper>
       </NavbarRightWrapper>
     </NavbarContainer>
